@@ -43,7 +43,7 @@ const Team = () => {
       bio: "Pineapple should not be on pizza 🍕",
       year: "2nd Year",
       program: "Computer Science",
-      color: "gdg-red",
+      color: "gdg-green",
     },
     {
       id: 3,
@@ -53,7 +53,7 @@ const Team = () => {
       bio: "I love exploring new ways to do old things, and nature walks!",
       year: "3rd Year",
       program: "Computer Science - Data Science",
-      color: "gdg-red",
+      color: "gdg-yellow",
     },
   ];
 
@@ -66,7 +66,7 @@ const Team = () => {
       bio: "Started coding to solve problems, now I just create them more efficiently 🤦‍♂️",
       year: "4th Year",
       program: "Software Engineering",
-      color: "gdg-green",
+      color: "gdg-red",
     },
     {
       id: 6,
@@ -76,7 +76,7 @@ const Team = () => {
       bio: "I love music 🎵",
       year: "4th Year",
       program: "Computer Science",
-      color: "gdg-green",
+      color: "gdg-red",
     },
     {
       id: 7,
@@ -86,7 +86,7 @@ const Team = () => {
       bio: "I love music — my favorite artist is Playboi Carti 🎧",
       year: "3rd Year",
       program: "Computer Science",
-      color: "gdg-green",
+      color: "gdg-red",
     },
     {
       id: 8,
@@ -96,7 +96,7 @@ const Team = () => {
       bio: "I like to involve myself with the Esports scene at Ontario Tech! Some of my favourite games are Street Fighter and Pokémon 🎮",
       year: "4th Year",
       program: "Computer Science",
-      color: "gdg-green",
+      color: "gdg-red",
     },
   ];
 
@@ -109,7 +109,7 @@ const Team = () => {
       bio: "My favourite artist is The Weeknd 🎶",
       year: "2nd Year",
       program: "Software Engineering",
-      color: "gdg-yellow",
+      color: "gdg-blue",
     },
     {
       id: 10,
@@ -119,7 +119,7 @@ const Team = () => {
       bio: "I love true crime, poetry, and bingeing The Office & Modern Family 📺",
       year: "4th Year",
       program: "Computer Science - Data Science Specialization",
-      color: "gdg-yellow",
+      color: "gdg-blue",
     },
   ];
 
@@ -133,7 +133,7 @@ const Team = () => {
     return colors[color] || "bg-gray-500 text-white";
   };
 
-  const Section = ({ title, members, centered }) => (
+  const Section = ({ title, members }) => (
     <div className="mb-20">
       <motion.h3
         initial={{ opacity: 0, y: 20 }}
@@ -156,11 +156,7 @@ const Team = () => {
             transition: { staggerChildren: 0.1 },
           },
         }}
-        className={
-          centered
-            ? "flex justify-center flex-wrap gap-8"
-            : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
-        }
+        className="flex justify-center flex-wrap gap-8"
       >
         {members.map((member) => (
           <motion.div
@@ -229,20 +225,19 @@ const Team = () => {
           </p>
         </motion.div>
 
-        {/* Centered President & One VP Section */}
+        {/* Centered President & VP */}
         <Section
           title="President & Vice President"
           members={presidentAndOneVp}
-          centered={true}
         />
 
-        {/* Other VPs */}
+        {/* Centered VPs */}
         <Section title="Vice Presidents" members={vps} />
 
-        {/* Technical Team */}
+        {/* Centered Technical Team */}
         <Section title="Technical Team" members={technical} />
 
-        {/* Marketing Team */}
+        {/* Centered Marketing Team */}
         <Section title="Marketing Team" members={marketing} />
 
         {/* Join CTA */}
