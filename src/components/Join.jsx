@@ -8,7 +8,7 @@ const Join = () => {
         "Join our Discord server for real-time discussions, announcements, and networking.",
       icon: "💬",
       color: "bg-indigo-500",
-      link: "https://discord.gg/gdg-ontario-tech",
+      link: "https://discord.gg/2dzmhaNr",
     },
     {
       name: "Instagram",
@@ -16,7 +16,7 @@ const Join = () => {
         "Follow us for event updates, behind-the-scenes content, and student spotlights.",
       icon: "📸",
       color: "bg-pink-500",
-      link: "https://instagram.com/gdg_ontario_tech",
+      link: "https://www.instagram.com/otu_gdg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     },
     {
       name: "LinkedIn",
@@ -24,7 +24,7 @@ const Join = () => {
         "Connect with us professionally and stay updated with industry insights.",
       icon: "💼",
       color: "bg-blue-600",
-      link: "https://linkedin.com/company/gdg-ontario-tech",
+      link: "https://www.linkedin.com/company/otu-gddon/posts/?feedView=all",
     },
     {
       name: "GitHub",
@@ -32,7 +32,7 @@ const Join = () => {
         "Explore our open-source projects and contribute to our codebase.",
       icon: "💻",
       color: "bg-gray-800",
-      link: "https://github.com/gdg-ontario-tech",
+      link: "https://discord.gg/2dzmhaNr",
     },
   ];
 

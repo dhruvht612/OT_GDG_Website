@@ -30,7 +30,7 @@ const Footer = () => {
         </svg>
       ),
       color: "hover:text-pink-400",
-      link: "https://www.instagram.com/otu_gdg",
+      link: "https://www.instagram.com/otu_gdg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     },
     {
       name: "LinkedIn",
@@ -40,7 +40,7 @@ const Footer = () => {
         </svg>
       ),
       color: "hover:text-blue-400",
-      link: "https://www.linkedin.com/company/otu-gddon/",
+      link: "https://www.linkedin.com/company/otu-gddon/posts/?feedView=all",
     },
   ];
 
