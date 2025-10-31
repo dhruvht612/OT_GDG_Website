@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://yourusername.github.io/gdg-ontario-tech",
+  "homepage": "https://dhruvht612.github.io/gdg-ontario-tech",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
