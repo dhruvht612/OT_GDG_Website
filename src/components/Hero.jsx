@@ -5,6 +5,7 @@ import {
   useReducedMotion,
 } from "framer-motion";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const prefersReducedMotion = useReducedMotion();
@@ -64,13 +65,13 @@ const Hero = () => {
         style={!prefersReducedMotion ? { rotateX, rotateY } : {}}
         className="max-w-6xl mx-auto text-center relative z-10"
       >
+        {/* Logo and Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          {/* GDG On Campus Logo */}
           <div className="flex items-center justify-center mb-8">
             <div className="flex items-center space-x-4">
               {["blue", "green", "yellow"].map((color, index) => (
@@ -105,7 +106,7 @@ const Hero = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-gdg-blue to-gdg-green mx-auto mb-8"></div>
         </motion.div>
 
-        {/* Animated Tagline */}
+        {/* Tagline */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -132,6 +133,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-6 justify-center items-center"
         >
+          {/* Join Button */}
           <a href="#join" aria-label="Join the GDG on Campus community">
             <motion.div
               className="relative group"
@@ -147,7 +149,8 @@ const Hero = () => {
             </motion.div>
           </a>
 
-          <a href="#events" aria-label="View upcoming GDG events">
+          {/* View Events Button (updated to use React Router Link) */}
+          <Link to="/events" aria-label="View upcoming GDG events">
             <motion.button
               className="bg-gdg-dark-surface hover:bg-gdg-black text-gdg-blue border-2 border-gdg-blue px-8 py-4 rounded-2xl text-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               whileHover={{
@@ -162,7 +165,7 @@ const Hero = () => {
             >
               View Events
             </motion.button>
-          </a>
+          </Link>
         </motion.div>
 
         {/* Stats Section */}
