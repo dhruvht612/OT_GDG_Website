@@ -29,4 +29,8 @@
   .font-mono {
     font-family: 'Google Sans Mono', monospace;
   }
+
+  html {
+  scroll-behavior: smooth;
+  }
 }

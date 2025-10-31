@@ -133,8 +133,40 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-6 justify-center items-center"
         >
-          {/* Join Button */}
-          <a href="#join" aria-label="Join the GDG on Campus community">
+          {/* Join Button (React Router Link + smooth scroll support) */}
+          <Link
+            to="/join"
+            aria-label="Join the GDG on Campus community"
+            onClick={(e) => {
+              const joinSection = document.getElementById("join");
+              if (joinSection) {
+                e.preventDefault();
+                joinSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            <motion.div
+              className="relative group"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              <div className="bg-gradient-to-r from-gdg-blue to-gdg-green p-[2px] rounded-2xl">
+                <button className="bg-gdg-dark-bg hover:bg-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                  Join Our Community
+                </button>
+              </div>
+            </motion.div>
+          </Link>
+
+          {/* Uncomment below if you want to link externally instead */}
+          {/*
+          <a
+            href="https://forms.gle/your-google-form-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Join via Google Form"
+          >
             <motion.div
               className="relative group"
               initial={{ opacity: 0, x: -50 }}
@@ -148,8 +180,9 @@ const Hero = () => {
               </div>
             </motion.div>
           </a>
+          */}
 
-          {/* View Events Button (updated to use React Router Link) */}
+          {/* View Events Button */}
           <Link to="/events" aria-label="View upcoming GDG events">
             <motion.button
               className="bg-gdg-dark-surface hover:bg-gdg-black text-gdg-blue border-2 border-gdg-blue px-8 py-4 rounded-2xl text-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
