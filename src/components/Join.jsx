@@ -32,7 +32,7 @@ const Join = () => {
         "Explore our open-source projects and contribute to our codebase.",
       icon: "💻",
       color: "bg-gray-800",
-      link: "https://discord.gg/2dzmhaNr",
+      link: "https://github.com/OTU-GDG",
     },
   ];
 
@@ -77,7 +77,7 @@ const Join = () => {
 
   return (
     <section className="py-20 bg-gdg-dark relative overflow-hidden text-gray-30">
-      {/* Subtle floating background accent */}
+      {/* Background accents */}
       <div className="absolute -z-10 top-10 left-20 w-96 h-96 bg-gdg-blue/20 blur-3xl rounded-full mix-blend-screen animate-pulse" />
       <div className="absolute -z-10 bottom-0 right-20 w-80 h-80 bg-gdg-green/20 blur-3xl rounded-full mix-blend-screen animate-pulse" />
 
@@ -100,7 +100,7 @@ const Join = () => {
           </p>
         </motion.div>
 
-        {/* Benefits and Platforms */}
+        {/* Benefits + Platforms */}
         <motion.div
           initial="hidden"
           whileInView="show"
@@ -188,6 +188,38 @@ const Join = () => {
           </motion.div>
         </motion.div>
 
+        {/* --- NEW SIGNUP SECTION --- */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-20 text-center"
+        >
+          <h3 className="text-3xl font-bold text-white mb-6">
+            Become a Member
+          </h3>
+          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+            Fill out this short form to stay updated on upcoming GDG Ontario
+            Tech events, workshops, and opportunities.
+          </p>
+
+          <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-lg border border-gdg-blue">
+            <iframe
+              src="https://forms.gle/6UoXwiMZsDQs2eC47"
+              width="100%"
+              height="800"
+              frameBorder="0"
+              marginHeight="0"
+              marginWidth="0"
+              title="GDG Ontario Tech Signup Form"
+            >
+              Loading…
+            </iframe>
+          </div>
+        </motion.div>
+        {/* --- END SIGNUP SECTION --- */}
+
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -222,59 +254,6 @@ const Join = () => {
               >
                 Follow on Instagram
               </button>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Resource Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <div className="p-[2px] rounded-2xl bg-gradient-to-r from-gdg-blue via-gdg-yellow to-gdg-green max-w-4xl mx-auto">
-            <div className="bg-gdg-dark-surface rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-white mb-6">
-                Official GDG On Campus Resources
-              </h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="text-left">
-                  <h4 className="font-bold text-gdg-blue mb-3">
-                    GDG On Campus Global
-                  </h4>
-                  <p className="text-gray-400 mb-4">
-                    Learn more about the global GDG On Campus program and access
-                    official resources.
-                  </p>
-                  <a
-                    href="https://developers.google.com/community/gdg"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gdg-blue hover:text-blue-400 font-medium"
-                  >
-                    Visit Official Website →
-                  </a>
-                </div>
-                <div className="text-left">
-                  <h4 className="font-bold text-gdg-green mb-3">
-                    Ontario Tech University
-                  </h4>
-                  <p className="text-gray-400 mb-4">
-                    Explore Ontario Tech's programs and resources for technology
-                    students.
-                  </p>
-                  <a
-                    href="https://ontariotechu.ca"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gdg-green hover:text-green-400 font-medium"
-                  >
-                    Visit University Website →
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </motion.div>
